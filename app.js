@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const mongodb=require('./db/conn');
 const User=require('./models/user');
+const location=require( './location/location');
 const router=express.router();
 
 const app = express();
@@ -56,6 +57,7 @@ app.post('/signup', (req, res) => {
       res.status(500).send('Internal Server Error');
     });
 });
+
 
 
 
